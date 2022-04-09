@@ -2,7 +2,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 body{
     z-index: 1;
@@ -26,10 +26,11 @@ label{
      line-height: 70px;
      display: none;
 }
-#toggle{
+#check{
     display: none;
 }
     /* BURGER MENU */
+
     /* MOBILE FIRTS */
     /* SMARTPHONE */
 @media (max-width: 480px){
@@ -60,13 +61,133 @@ label{
         grid-area: footer;
     }
         /* GRID */
+        /* ANIMACION */
+    @keyframes menu {
+        0%{
+            opacity: 0.2;
+            transform: translateY(-50px);
+        }
+    }
+    @keyframes burger {
+        0%{
+            font-size: 40px;
+            color: red;
+        }
+    }
+    @keyframes logo {
+        0%{
+            transform: translateY(-500px);
+        }
+    }
+    @keyframes wpp {
+        0%{
+            border-radius: 49%;
+            outline: solid rgb(201, 233, 255, 1) 2px;
+        }
+        10%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.9) 4px;
+        }
+        20%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.9) 6px;
+        }
+        30%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.8) 8px;
+        }
+        40%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.7) 10px;
+        }
+        50%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.6) 15px;
+        }
+        55%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.5) 20px;
+        }
+        60%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.5) 10px;
+        }
+        70%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.4) 8px;
+        }
+        80%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.3) 6px;
+        }
+        90%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.2) 4px;
+        }
+        100%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.1) 2px;
+        }
+    }
+    .icono-wpp{
+        border-radius: 50%;
+        outline: solid rgba(255, 255, 255, 0.5) 1px;
+        animation-name: wpp;
+        animation-duration: 1.7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+    #menu{
+        animation-name: menu;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+    }
+    .f-menu a:hover {
+        padding-bottom: 5px;
+        border-bottom: solid 2px white;
+    }
+    .logo-animation-index{
+        animation-name: logo;
+        animation-duration: 2s;
+    }
+    #check:checked ~ span:nth-of-type(1){
+        transform-origin:bottom;
+        transform:rotatez(45deg) translate(8px,0px)
+    }
+    #check:checked ~ span:nth-of-type(2){
+        transform-origin:top;
+        transform:rotatez(-45deg)
+    }
+    #check:checked ~ span:nth-of-type(3){
+        transform-origin:bottom;
+        width:50%;
+        transform: translate(30px,-11px) rotatez(45deg);
+    }
+        /* ANIMACION */
         /* MENU */
         /* MENU BURGER */
     label{
-        display: block;
-        cursor: pointer;
-        font-size: 80px;
-        color: white;
+        display:flex;
+        flex-direction:column;
+        width:70px;
+        cursor:pointer;
+    }
+    label span{
+        background: #fff;
+        border-radius:10px;
+        height:7px;
+        margin: 7px 0;
+        transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+    span:nth-of-type(1){
+        width:50%;   
+    }
+      
+    span:nth-of-type(2){
+        width:100%;
+    }
+    span:nth-of-type(3){
+        width:75%;
     }
     #menu{
         text-align: center;
@@ -82,10 +203,17 @@ label{
         margin-top: 10px;
         padding: 2%;
     }
-    #toggle:checked + #menu{
+    #check:checked + #menu{
         display: block;
     }
         /* MENU BURGER */
+    .icono-wpp{
+        position: fixed;
+        width: 50px;
+        right: 0;
+        bottom: 0;
+        margin: 1% 1%;
+        }
     .logo{
         display: flex;
         flex-flow: row nowrap;
@@ -299,7 +427,97 @@ label{
         grid-area: footer;
     }
         /* GRID */
+        /* ANIMACION */
+    @keyframes menu {
+        0%{
+            opacity: 0.5;
+            transform: translateY(-1000px);
+        }
+    }
+    @keyframes logo {
+        0%{
+            transform: translateY(-500px);
+        }
+    }
+    @keyframes wpp {
+        0%{
+            border-radius: 49%;
+            outline: solid rgb(201, 233, 255, 1) 2px;
+        }
+        10%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.9) 4px;
+        }
+        20%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.9) 6px;
+        }
+        30%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.8) 8px;
+        }
+        40%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.7) 10px;
+        }
+        50%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.6) 15px;
+        }
+        55%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.5) 20px;
+        }
+        60%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.5) 10px;
+        }
+        70%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.4) 8px;
+        }
+        80%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.3) 6px;
+        }
+        90%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.2) 4px;
+        }
+        100%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.1) 2px;
+        }
+    }
+    .icono-wpp{
+        border-radius: 50%;
+        outline: solid rgba(255, 255, 255, 0.5) 1px;
+        animation-name: wpp;
+        animation-duration: 1.7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+    #menu{
+        animation-name: menu;
+        animation-duration: 1s;
+    }
+    .f-menu a:hover {
+        padding-bottom: 5px;
+        border-bottom: solid 2px white;
+    }
+    .logo-animation-index{
+        animation-name: logo;
+        animation-duration: 2s;
+    }
+        /* ANIMACION */
         /* MENU */
+    .icono-wpp{
+        position: fixed;
+        width: 50px;
+        right: 0;
+        bottom: 0;
+        margin: 1% 1%;
+        }
     .logo{
         width: 100%;
         display: flex;
@@ -527,7 +745,7 @@ label{
         "footer"
         ;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-rows: .1fr 2fr 1fr;
     }
     header{
         grid-area: header;
@@ -539,7 +757,101 @@ label{
         grid-area: footer;
     }
         /* GRID GENERAL */
+        /* ANIMACION */
+    #menu a:hover{
+        border-bottom: solid 3px white;
+        background-color: #001829;
+    }
+    @keyframes menu {
+        0%{
+            opacity: 0.5;
+            transform: translateY(-1000px);
+        }
+    }
+    @keyframes logo {
+        0%{
+            transform: translateX(-500px);
+        }
+    }
+    @keyframes wpp {
+        0%{
+            border-radius: 49%;
+            outline: solid rgb(201, 233, 255, 1) 2px;
+        }
+        10%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.9) 4px;
+        }
+        20%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.9) 6px;
+        }
+        30%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.8) 8px;
+        }
+        40%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.7) 10px;
+        }
+        50%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.6) 15px;
+        }
+        55%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.5) 20px;
+        }
+        60%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.5) 10px;
+        }
+        70%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.4) 8px;
+        }
+        80%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.3) 6px;
+        }
+        90%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.2) 4px;
+        }
+        100%{
+            border-radius: 49%;
+            outline: solid rgba(201, 233, 255, 0.1) 2px;
+        }
+    }
+    .icono-wpp{
+        border-radius: 50%;
+        outline: solid rgba(255, 255, 255, 0.5) 1px;
+        animation-name: wpp;
+        animation-duration: 1.7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+    #menu{
+        animation-name: menu;
+        animation-duration: 1s;
+    }
+    .f-menu a:hover {
+        padding-bottom: 5px;
+        border-bottom: solid 2px white;
+    }
+    .logo-animation-index{
+        animation-name: logo;
+        animation-duration: 2s;
+    }
+        /* ANIMACION */
         /* MENU */
+    .icono-wpp{
+        position: fixed;
+        width: 50px;
+        right: 0;
+        bottom: 0;
+        margin: 1% 1%;
+    }
     header{
         display: flex;
         flex-flow: row nowrap;
@@ -551,16 +863,10 @@ label{
         border-bottom: 3px solid black;
     }
     #menu{
-        border-left: 3px solid black;
-        border-bottom: 1px solid black;
-        border-top: 1px solid black;
-        border-radius: 20px 0px 0px 20px;
-        background-color: #F3F3F3;
-        height: 60px;
+        /* background-color: #F3F3F3; */
         display: flex;
         flex-flow: row nowrap;
-        align-items:center;
-        width: 100%;
+        justify-content: space-around;
     }
     #menu div{
         padding-left: 60px;
@@ -569,8 +875,9 @@ label{
     #menu div a{
         font-family: lato-g;
         text-decoration: none;
-        color: #001E33;
+        color: white;
         font-size: 150%;
+        padding-bottom: 10px;
     }
     #logo{
         width: 130px;
