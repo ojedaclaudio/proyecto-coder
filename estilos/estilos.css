@@ -155,8 +155,10 @@ label{
         /* MENU */
         /* MENU BURGER */
     label{
-        font-size:80px;
-        cursor:pointer;
+        display: block;
+        cursor: pointer;
+        font-size: 80px;
+        color: white;
     }
     #menu{
         text-align: center;
